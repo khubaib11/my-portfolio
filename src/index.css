@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(../public/img/bk0.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+.home {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  border-radius: 5pc;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.15);
+  /* Adjust opacity as needed */
+  backdrop-filter: blur(5px);
+  /* Adjust blur amount as needed */
+  display: flex;
+
+
+  .img-box,
+  .img-text {
+    flex: 40%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    font-size: 1.5vw;
+    color: var(--blue--dark);
+    line-height: 1;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+
+  }
+  
+
+  .img-text>.my-details {
+    max-width: 1100px;
+    margin-top: -10pc;
+  }
+
+
+  .img-box>.my-img {
+
+    /* max-width: 360px; */
+    background-color: var(--white-alpha-25);
+    border-radius: 50%;
+    border: 8px solid var(--white-alpha-25);
+    width: 50%;
+    /* Adjust this percentage based on your design */
+    padding-top: 50%;
+    /* Maintain a square aspect ratio */
+    background-image: url(../public/img/mypic1.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 5% 0;
+
+  }
+
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* Set the height of the container to 100% of the viewport height */
+
+
+  .nav-bar{
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 5%;
+    
+  }
+
+    .img-box {
+      width: 100%;
+      flex: 0 0 40%;
+      /* Set the flex property to control the height (30% of the container's height) */
+
+      .my-img {
+        background-color: var(--white-alpha-25);
+        border-radius: 50%;
+        border: 8px solid var(--white-alpha-25);
+        margin: auto;
+        width: 40vw;
+        /* Adjust this percentage based on your design */
+        
+        padding-top: 50%;
+        /* Maintain a square aspect ratio */
+        background-image: url(../public/img/mypic1.jpeg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .img-text {
+      width: 100%;
+      flex: 60%;
+      /* Take up remaining space (70% of the container's height) */
+      font-size: 0.8pc;
+      color: var(--blue--dark);
+      line-height: 1;
+      overflow-wrap: hidden;
+      -webkit-tap-highlight-color: transparent;
+      order: 1;
+      align-items: none;
+      justify-content:center;
+    }
+
+
+  }
+
+}
