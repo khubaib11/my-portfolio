@@ -2,127 +2,333 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url(../public/img/bk0.png);
+  background-image: url(../public/img/bk7.jpeg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-}
 
+
+}
 
 
 .home {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  height: 80vh;
-  border-radius: 5pc;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.15);
-  /* Adjust opacity as needed */
-  backdrop-filter: blur(5px);
-  /* Adjust blur amount as needed */
+  height: 100vh;
+  width: 100vw;
   display: flex;
+  justify-content: center;
+  align-items: center;
 
 
-  .img-box,
-  .img-text {
-    flex: 40%;
+  .navbar {
+    width: 100%;
+    height: 10%;
     display: flex;
-    
-    justify-content: center;
+    justify-content: end;
+    .side-btn-box{
+      overflow: hidden;
+        /* background-color: aqua; */
+        height: 100%;
+        width: 6vw;
+        min-width: 5rem;
+
+        /* max-width: 120px; */
+
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+  }
+
+  .main-body {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: auto;
+  }
+
+  .footer {
+
+    height: 5%;
+    width: 100%;
+
+  }
+
+
+
+  .left {
+    flex: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+
+  }
+
+  .details {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    font-size: clamp(2vh, 1vw, 3vw);
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
 
-    font-size: 1.5vw;
-    color: var(--blue--dark);
-    line-height: 1;
-    overflow-x: hidden;
-    -webkit-tap-highlight-color: transparent;
+  }
 
+  @keyframes typing {
+    from {
+      width: 0;
+    }
   }
   
+  
+  p,
+  h1,
+  h2 {
+    overflow: hidden; /* Hide overflow text */
+    white-space: nowrap; /* Don't wrap text */
+    animation: typing 3s steps(30, end); /* Typing animation lasting 3 seconds */
 
-  .img-text>.my-details {
-    max-width: 1100px;
-    margin-top: -10pc;
+    margin: 0.3pc;
   }
 
 
-  .img-box>.my-img {
+  .btn-box {
+    /* background-color: blue; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
 
-    /* max-width: 360px; */
-    background-color: var(--white-alpha-25);
-    border-radius: 50%;
-    border: 8px solid var(--white-alpha-25);
-    width: 50%;
-    /* Adjust this percentage based on your design */
-    padding-top: 50%;
-    /* Maintain a square aspect ratio */
-    background-image: url(../public/img/mypic1.jpeg);
-    background-size: cover;
-    background-position: center;
-    margin: 5% 0;
+    div {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .btn {
+      background-color: transparent;
+      width: 8vw;
+      height: 5vh;
+      max-width: 220px;
+      max-height: 70px;
+      min-width: 90px;
+      min-height: 25px;
+      border-radius: 10px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      
+    }
+    .btn:hover {
+      /* Increase box shadow to create a pop-up effect */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+    }
+  }
+
+
+
+
+  .right {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 40%;
+    height: 100%;
+
+
+
+    .my-img {
+      background-image: url('../public/img/mypic1.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-height: 90%;
+      width: 50%;
+      border-radius: 50%;
+      min-width: 120px;
+      background-color: black;
+
+
+    }
+
+
+    .my-img::after {
+      content: '';
+      padding-bottom: 100%;
+      display: block;
+    }
+
+  }
+
+
+
+  @media (max-aspect-ratio: 1/1) {
+    .home {
+      flex-direction: column;
+
+    }
+
+    .navbar {
+      order: 1;
+    }
+
+    .main-body {
+      order: 2;
+      flex-direction: column;
+    }
+
+    .right {
+      order: 3;
+
+      .my-img {
+        max-width: calc(10vw + 10vh);
+      }
+
+
+
+    }
+
+    .left {
+      order: 4;
+
+      .details {
+        height: 40%;
+      }
+
+      .btn-box {
+        height: 60%;
+
+        .btn {
+          border-radius: 5pc;
+          max-height: 90%;
+          min-height: 4vh;
+
+        }
+      }
+    }
+
+    .footer {
+      order: 5;
+    }
+
+    .details {
+      justify-content: center;
+
+      div {
+        font-size: 1.5vh;
+      }
+
+    }
 
   }
 
 }
 
-@media (max-aspect-ratio: 1/1) {
-  .home {
+.home>div {
+  border-radius: 3pc;
+  /* background-color: rgba(179, 156, 156, 0.15); */
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+
+  width: 70vw;
+  height: 70vh;
+  flex-basis: 10% 40% 50%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.side-btn {
+  background-color: transparent;
+  border-radius: 50%;
+  height: 40px;
+  width: 70%;
+  max-width: 40px;
+  max-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.side-btn:hover {
+  /* Increase box shadow to create a pop-up effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.side-btn > div {
+  height: 1px;
+  width: 80%;
+  min-width: 20px;
+  background-color: black;
+}
+
+
+.SideBtnPopUp {
+  display: none; 
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color:transparent; 
+  border: 1px solid #cccccc; 
+  padding: 10px; 
+  font-size: 18px;
+  border-radius: 4pc;
+  ul{
+    padding: 0px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    /* Set the height of the container to 100% of the viewport height */
+    justify-content: center;
+    gap: 15px;
 
-
-  .nav-bar{
-    flex: 10%;
+    align-items: center;
+  }
+  li{
+    list-style: none;
+    width: 130px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    padding-bottom: 5%;
-    
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4pc;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s, transform 0.3s;
   }
-
-    .img-box {
-      width: 100%;
-      flex: 0 0 40%;
-      /* Set the flex property to control the height (30% of the container's height) */
-
-      .my-img {
-        background-color: var(--white-alpha-25);
-        border-radius: 50%;
-        border: 8px solid var(--white-alpha-25);
-        margin: auto;
-        width: 40vw;
-        /* Adjust this percentage based on your design */
-        
-        padding-top: 50%;
-        /* Maintain a square aspect ratio */
-        background-image: url(../public/img/mypic1.jpeg);
-        background-size: cover;
-        background-position: center;
-      }
-    }
-
-    .img-text {
-      width: 100%;
-      flex: 60%;
-      /* Take up remaining space (70% of the container's height) */
-      font-size: 0.8pc;
-      color: var(--blue--dark);
-      line-height: 1;
-      overflow-wrap: hidden;
-      -webkit-tap-highlight-color: transparent;
-      order: 1;
-      align-items: none;
-      justify-content:center;
-    }
+  
+}
 
 
-  }
 
+/* Show the pop-up when its parent button is clicked */
+.side-btn .SideBtnPopUp {
+  display: block;
+}
+
+.main-body.blur {
+  filter: blur(20px);
+  opacity: 0.3;
 }
