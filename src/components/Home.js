@@ -70,7 +70,7 @@ const Home = () => {
               <div>
                 {showBtn && (
                   <div>
-                    <button className="btn">About Me</button>
+                    <button className="btn">About</button>
                     <button className="btn">Projects</button>
                   </div>
                 )}

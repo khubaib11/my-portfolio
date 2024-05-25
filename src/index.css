@@ -175,9 +175,10 @@ body {
   @media (max-aspect-ratio: 1/1) {
     .home {
       flex-direction: column;
+      
 
     }
-
+    
     .navbar {
       order: 1;
     }
@@ -237,10 +238,11 @@ body {
 .home>div {
   border-radius: 3pc;
   /* background-color: rgba(179, 156, 156, 0.15); */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);  
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(8px);
   display: flex;
@@ -280,55 +282,41 @@ body {
 }
 
 
-.SideBtnPopUp {
-  display: none; 
-  position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  background-color:transparent; 
-  border: 1px solid #cccccc; 
-  padding: 10px; 
-  font-size: 18px;
-  border-radius: 4pc;
-  ul{
-    padding: 0px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-
-    align-items: center;
-  }
-  li{
-    list-style: none;
-    width: 130px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 4pc;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-  
-}
-
-
-
-/* Show the pop-up when its parent button is clicked */
-.side-btn .SideBtnPopUp {
-  display: block;
-}
-
 .main-body.blur {
+  filter: blur(20px);
+  opacity: 0.3;
+}
+
+
+.projects{
+  padding: 20px;
+  border-radius: 3pc;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(8px);
+
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+
+  width: 80vw;
+  height: 70vh;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.render-projects{
+    
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.render-projects.blur {
   filter: blur(20px);
   opacity: 0.3;
 }
