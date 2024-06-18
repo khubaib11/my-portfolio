@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Project from './Project';
 import SideBtn from './SideBtn';
-import ProjectAllDetails from './ProjectAllDetails';
-import projectData from '../data/projectData.json';
+import Course from './Course';
+import courseData from '../data/courseData.json';
 
-
-function Projects() {
-    const [id, setId] = useState(0);
+function Courses() {
     const [blurProjectsBodyNav, setBlurProjectsBodyNav] = useState(false); // State for blur effect
     const [blurProjectsBody, setBlurProjectsBody] = useState(false);
     const [blurprojectstyle,setBlurprojectstyle] = useState({ overflow: 'auto', maxHeight: '800px', scrollbarWidth: 'none', '-ms-overflow-style': 'none' })
@@ -49,16 +46,16 @@ function Projects() {
             
             <div className={`projects `} style={blurprojectstyle} >
             <div style={navbarStyle}>
-                    <h1 style={titleStyle}>Projects</h1>
+                    <h1 style={titleStyle}>Courses</h1>
                     <div style={sideBtnBoxStyle}>
                         <SideBtn setBlurMainBody={setBlurProjectsBodyNav} />
                     </div>
                 </div>
-            { blurProjectsBody && <ProjectAllDetails id={id} setBlurMainBody={setBlurProjectsBody} />}
+            {/* { blurProjectsBody && <ProjectAllDetails id={id} setBlurMainBody={setBlurProjectsBody} />} */}
                 <div className={`render-projects ${blurProjectsBody || blurProjectsBodyNav ? 'blur' : ''}`}>
                 {
-                    projectData.map((project)=>(
-                        <Project key={project.id} setBlurMainBody={setBlurProjectsBody}  data={project} setId={setId} />
+                    courseData.map((project)=>(
+                        <Course key={project.id} data={project}  />
                     ))
                 }
 
@@ -69,4 +66,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default Courses;

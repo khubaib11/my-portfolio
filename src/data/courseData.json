@@ -1,0 +1,45 @@
+[
+    {
+        "id":1,
+        "name":"Developing Back-End Apps with Node.js and Express",
+        "description":"Skills: NodeJS, back-end,Web Development,express",
+        "link":"https://www.coursera.org/account/accomplishments/certificate/VULT8LFCH8RH",
+        "img":"/img/c0.png"
+    },
+    {
+        "id":2,
+        "name":"Database Structures and Management with MySQL",
+        "description":"Skills: DBMS, DA, Data Management, MySQL",
+        "link":"https://www.coursera.org/account/accomplishments/certificate/XY4QX92QXRZ3",
+        "img":"/img/c1.png"
+    },
+    {
+        "id":3,
+        "name":"Git for Developers Using Github",
+        "description":"Skills: Version Control, Github, Developer tools, GIT",
+        "link":"https://www.coursera.org/account/accomplishments/certificate/DKSC9J68GPXU",
+        "img":"/img/c2.jpeg"
+    },  
+    {
+        "id":4,
+        "name":"Introduction to Back-End Development",
+        "description":"Skills: HTML, CSS, JavaScript,React, APIs",
+        "link":"https://www.coursera.org/account/accomplishments/certificate/5866Q9TZCS6N",
+        "img":"/img/c3.jpeg"
+    },
+    {
+        "id":5,
+        "name":"Writing and Editing: Structure and Organization",
+        "description":"Skills: Creativity,Time management,Persuasion,Writing",
+        "link":"https://www.coursera.org/account/accomplishments/certificate/8N8JPPSZM6S3",
+        "img":"/img/c4.jpeg"
+    },
+    {
+        "id":6,
+        "name":"Introduction to MongoDB",
+        "description":"Skills: MongoDB Crud,Mongoose,NodeJS,MongoDB Aggregation",
+        "link":"https://ti-user-certificates.s3.amazonaws.com/ae62dcd7-abdc-4e90-a570-83eccba49043/586d5f6d-2f3c-417c-b169-37ab01c9966d-khubaib-khan-bcb87934-3d70-4c5b-8963-3197845848d2-certificate.pdf",
+        "img":"/img/c5.png"
+    }
+    
+]

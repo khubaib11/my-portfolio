@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-function Project({ setBlurMainBody,data,setId }) {
 
-  const [showPopUp, setShowPopUp] = useState(false);
+function Course({ data, setId }) {
 
-  const togglePopUp = () => {
-    setShowPopUp(!showPopUp);
-    setBlurMainBody(!showPopUp); // Toggle blur effect
-    setId(data.id);
-  };
 
   const cardStyle = {
     width: '18rem',
@@ -19,7 +13,7 @@ function Project({ setBlurMainBody,data,setId }) {
     backgroundColor: 'rgba(199, 188, 188, 0.514)',
     border: '1px solid rgba(255, 254, 254, 0.685)',
     boxShadow: '0 8px 32px 0 rgba(211, 213, 245, 0.15)',
-    opacity: '2 ',
+    opacity: '2',
   };
 
   const imgStyle = {
@@ -42,22 +36,25 @@ function Project({ setBlurMainBody,data,setId }) {
     color: 'black',
   };
 
+  const linkStyle = {
+    textDecoration: 'none',
+    color: 'inherit',
+  };
 
   return (
-
     <Card style={cardStyle}>
-      <Card.Img variant="top" src='/img/bk3.jpeg' style={imgStyle} />
+      <Card.Img variant="top" src={data.img} style={imgStyle} />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
         <Card.Text style={textStyle}>
           {data.description}
         </Card.Text>
-        <Button style={buttonStyle} onClick={togglePopUp} >Go somewhere</Button>
+        <Button style={buttonStyle} >
+          <a href={data.link} style={linkStyle} target="_blank" rel="noopener noreferrer">Click</a>
+        </Button>
       </Card.Body>
     </Card>
-
-
   );
 }
 
-export default Project;
+export default Course;

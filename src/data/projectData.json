@@ -1,0 +1,17 @@
+[{
+    "id":1,
+    "name":"user-Authentication-Website",
+    "description":"This project leverages Node.js and Express for the backend, ensuring efficient server-side operations. MySQL is employed for secure and reliable data storage. The front-end interface is rendered using the Handlebars (HBS) view engine, providing a seamless and dynamic user experience. ",
+    "github":"https://github.com/khubaib11/user-Authentication-Website"
+    ,"img":["/video/userAthentication Project.mp4","/img/p1i1.png","/img/p1i2.png","/img/p1i3.png","/img/p1i4.png","/img/p1i5.png"],
+    "technologies":" React, Node, Express, Mysql"
+},
+{
+    "id":2,
+    "name":"Chat App",
+    "description":"This project is use for communication between users. It is a real time chat application. It is a simple chat application that allows users to send and receive messages in real time. The application is built using Node.js, Express, and Socket.io.",
+    "github":"https://github.com/khubaib11/chatApp"
+    ,"img":["/video/ChatApp Project.mp4","/img/p2i1.png"],
+    "technologies":"HTML, JavaScript, Node, Express, Socket.io"
+}
+]
