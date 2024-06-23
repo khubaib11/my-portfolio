@@ -1,6 +1,6 @@
 [{
     "id":1,
-    "name":"user-Authentication-Website",
+    "name":"User-Authentication",
     "description":"This project leverages Node.js and Express for the backend, ensuring efficient server-side operations. MySQL is employed for secure and reliable data storage. The front-end interface is rendered using the Handlebars (HBS) view engine, providing a seamless and dynamic user experience. ",
     "github":"https://github.com/khubaib11/user-Authentication-Website"
     ,"img":["/video/userAthentication Project.mp4","/img/p1i1.png","/img/p1i2.png","/img/p1i3.png","/img/p1i4.png","/img/p1i5.png"],

@@ -24,3 +24,41 @@
   to { transform: rotate(360deg); }
 }
 
+.App{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.aboutMe {
+  margin-top: 5vh;
+  border-radius: 3pc;
+  backdrop-filter: blur(8px);  
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 50vw;
+  height: 99vh;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .aboutMe {
+    margin-top: 2vh;
+    width: 90vw !important;
+    height: 95vh !important;
+    .boxInfo{
+      width: 83vw !important;
+      padding: 2vw 2vh  2vw 2vh!important;
+    }  
+  }
+
+  .side-btn {
+    height: 40px !important;
+    width: 40px !important;
+  
+  }
+  .side-btn>div{
+    font-size: 1.2rem !important;
+    
+  }
+
+}

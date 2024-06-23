@@ -13,11 +13,12 @@ function Projects() {
 
     const navbarStyle = {
         width: '100%',
-        height: '10%',
+        minHeight: '10%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         marginBottom: '5vh',
+        
     };
 
     const sideBtnBoxStyle = {

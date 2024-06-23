@@ -38,29 +38,31 @@ function ProjectAllDetails({ id }) {
 
   const navbarStyle = {
     width: '100%',
-    height: '10%',
+    minHeight: '10%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: '1pc',
-  };
+    marginBottom: '5vh',
+    
+};
 
-  const sideBtnBoxStyle = {
-    overflow: 'hidden',
-    height: '100%',
-    width: '6vw',
-    minWidth: '5rem',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-  };
+const sideBtnBoxStyle = {
+  overflow: 'hidden',
+  height: '100%',
+  width: '6vw',
+  minWidth: '5rem',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'flex-end',
+};
 
-  const titleStyle = {
-    flexGrow: 1,
-    textAlign: 'center',
-  };
+const titleStyle = {
+  flexGrow: 1,
+  textAlign: 'center',
+};
 
   const projectDetailsStyle = {
+    padding: '1.2rem',
     width: '100%',
     height: '80%',
     display: 'flex',
@@ -92,6 +94,8 @@ function ProjectAllDetails({ id }) {
     maxHeight: '800px',
     scrollbarWidth: 'none',
     msOverflowStyle: 'none',
+    flexDirection: 'column',
+    padding: '1rem',
   };
 
   const arrowStyle = {
@@ -119,13 +123,16 @@ function ProjectAllDetails({ id }) {
 
   return (
     <div className='projectsDetailView'>
-      <div>
+      <div >
+        <div style={{width:'100%'}}>
         <div style={navbarStyle}>
-          <h1 style={titleStyle}>Projects</h1>
+          <h1 style={titleStyle}>{project.name}</h1>
           <div style={sideBtnBoxStyle}>
             <SideBtn setBlurMainBody={setBlurProjectsBodyNav} />
           </div>
         </div>
+        </div>
+        
         {!blurProjectsBodyNav && (
           <div style={projectDetailsStyle} className='projectDetailBody'>
             <div style={pleftStyle} className='pleft'>
@@ -139,16 +146,14 @@ function ProjectAllDetails({ id }) {
             </div>
             <div style={prightStyle} className='pright'>
               <div>
-                <h1>{project.name}</h1>
+                <h5 style={{ fontSize: isPortrait ? '1rem' : '1.25rem' }}>Description:</h5>
+                <p style={{ fontSize: isPortrait ? '0.9rem' : '1rem' }}>{project.description}</p>
                 <br />
-                <h5>Description:</h5>
-                <p>{project.description}</p>
+                <h5 style={{ fontSize: isPortrait ? '1rem' : '1.25rem' }}>Technologies: </h5>
+                <p style={{ fontSize: isPortrait ? '0.9rem' : '1rem' }}>{project.technologies}</p>
                 <br />
-                <h5>Technologies: </h5>
-                <p>{project.technologies}</p>
-                <br />
-                <h5>GitHUB Link:</h5>
-                <a href={project.github} target="_blank" style={{ textDecoration: 'none', color: 'black' }}>
+                <h5 style={{ fontSize: isPortrait ? '1rem' : '1.25rem' }}>GitHUB Link:</h5>
+                <a href={project.github} target="_blank" style={{ textDecoration: 'none', color: 'black', fontSize: isPortrait ? '0.9rem' : '1rem' }}>
                   {project.github}
                 </a>
               </div>

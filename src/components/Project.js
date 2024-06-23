@@ -20,6 +20,7 @@ function Project({ setBlurMainBody,data,setId }) {
     border: '1px solid rgba(255, 254, 254, 0.685)',
     boxShadow: '0 8px 32px 0 rgba(211, 213, 245, 0.15)',
     opacity: '2 ',
+    minHeight: '24rem',
   };
 
   const imgStyle = {
@@ -49,10 +50,10 @@ function Project({ setBlurMainBody,data,setId }) {
       <Card.Img variant="top" src='/img/bk3.jpeg' style={imgStyle} />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
-        <Card.Text style={textStyle}>
-          {data.description}
+        <Card.Text style={textStyle}>I have developed a project using    
+          {data.technologies}
         </Card.Text>
-        <Button style={buttonStyle} onClick={togglePopUp} >Go somewhere</Button>
+        <Button style={buttonStyle} onClick={togglePopUp} >View IT </Button>
       </Card.Body>
     </Card>
 

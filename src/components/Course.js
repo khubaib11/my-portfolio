@@ -50,7 +50,7 @@ function Course({ data, setId }) {
           {data.description}
         </Card.Text>
         <Button style={buttonStyle} >
-          <a href={data.link} style={linkStyle} target="_blank" rel="noopener noreferrer">Click</a>
+          <a href={data.link} style={linkStyle} target="_blank" rel="noopener noreferrer">Verify</a>
         </Button>
       </Card.Body>
     </Card>

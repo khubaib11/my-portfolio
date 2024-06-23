@@ -11,10 +11,8 @@ function SideBtn({ setBlurMainBody }) {
 
   return (
     <button className='side-btn' onClick={togglePopUp}>
-      <div></div>
-      <div></div>
-      <div></div>
       <div>
+      <span >&#9776;</span>
         {showPopUp && <SideBtnPopUp />}
       </div>
     </button>

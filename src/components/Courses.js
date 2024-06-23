@@ -10,7 +10,7 @@ function Courses() {
 
     const navbarStyle = {
         width: '100%',
-        height: '10%',
+        minHeight: '10%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -42,7 +42,7 @@ function Courses() {
         
     },[blurProjectsBodyNav,blurProjectsBody]);
     return (
-        <div>
+        <div >
             
             <div className={`projects `} style={blurprojectstyle} >
             <div style={navbarStyle}>
