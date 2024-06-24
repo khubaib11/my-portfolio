@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-function Project({ setBlurMainBody,data,setId }) {
+import { Link } from 'react-router-dom';
 
-  const [showPopUp, setShowPopUp] = useState(false);
-
-  const togglePopUp = () => {
-    setShowPopUp(!showPopUp);
-    setBlurMainBody(!showPopUp); // Toggle blur effect
-    setId(data.id);
-  };
+function Project({ data }) {
 
   const cardStyle = {
     width: '18rem',
@@ -19,7 +12,7 @@ function Project({ setBlurMainBody,data,setId }) {
     backgroundColor: 'rgba(199, 188, 188, 0.514)',
     border: '1px solid rgba(255, 254, 254, 0.685)',
     boxShadow: '0 8px 32px 0 rgba(211, 213, 245, 0.15)',
-    opacity: '2 ',
+    opacity: '2',
     minHeight: '24rem',
   };
 
@@ -43,21 +36,20 @@ function Project({ setBlurMainBody,data,setId }) {
     color: 'black',
   };
 
-
   return (
-
     <Card style={cardStyle}>
       <Card.Img variant="top" src='/img/bk3.jpeg' style={imgStyle} />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
-        <Card.Text style={textStyle}>I have developed a project using    
-          {data.technologies}
+        <Card.Text style={textStyle}>
+          I have developed a project using {data.technologies}
         </Card.Text>
-        <Button style={buttonStyle} onClick={togglePopUp} >View IT </Button>
+        {/* Use Link component to navigate to project details */}
+        <Link to={`/projects/:${data.id}`} style={buttonStyle}>
+          View IT
+        </Link>
       </Card.Body>
     </Card>
-
-
   );
 }
 

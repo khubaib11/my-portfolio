@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Project from './Project';
 import SideBtn from './SideBtn';
-import ProjectAllDetails from './ProjectAllDetails';
 import projectData from '../data/projectData.json';
 
 
@@ -55,7 +54,7 @@ function Projects() {
                         <SideBtn setBlurMainBody={setBlurProjectsBodyNav} />
                     </div>
                 </div>
-            { blurProjectsBody && <ProjectAllDetails id={id} setBlurMainBody={setBlurProjectsBody} />}
+            
                 <div className={`render-projects ${blurProjectsBody || blurProjectsBodyNav ? 'blur' : ''}`}>
                 {
                     projectData.map((project)=>(

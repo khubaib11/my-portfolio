@@ -1,18 +1,22 @@
+import { text } from '@fortawesome/fontawesome-svg-core';
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function SideBtnPopUp() {
   const sideBtnPopUpStyle = {
-    display: 'none',
+    // display: 'none',
     position: 'fixed',
     top: '50%',
-    left: '50%',
+    left: '50%',  
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'transparent',
     border: '1px solid #cccccc',
     padding: '10px',
     fontSize: '18px',
     borderRadius: '4pc',
+    zIndex: '2',
   };
+  
 
   const ulStyle = {
     padding: '0px',
@@ -22,6 +26,8 @@ function SideBtnPopUp() {
     justifyContent: 'center',
     gap: '15px',
     alignItems: 'center',
+    //remove dots from list
+    listStyleType: 'none',
   };
 
   const liStyle = {
@@ -38,6 +44,8 @@ function SideBtnPopUp() {
     boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
     border: '1px solid rgba(255, 255, 255, 0.3)',
     transition: 'box-shadow 0.3s, transform 0.3s',
+    textDecoration: 'none',
+    color: 'black',
   };
 
   // Function to toggle visibility of popup based on window size
@@ -58,10 +66,8 @@ function SideBtnPopUp() {
     }
   };
 
-  // Add event listener for window resize
   window.addEventListener('resize', togglePopupVisibility);
 
-  // Call togglePopupVisibility when component mounts
   React.useEffect(() => {
     togglePopupVisibility();
     return () => window.removeEventListener('resize', togglePopupVisibility);
@@ -70,11 +76,11 @@ function SideBtnPopUp() {
   return (
     <div style={sideBtnPopUpStyle} className='SideBtnPopUp'>
       <ul style={ulStyle}>
-        <li style={liStyle}>Home</li>
-        <li style={liStyle}>About Me</li>
-        <li style={liStyle}>Projects</li>
-        <li style={liStyle}>Courses</li>
-        <li style={liStyle}>Contact</li>
+        <li><Link to="/" style={liStyle}>Home</Link> </li>
+        <li> <Link to="/about" style={liStyle}>About Me</Link> </li>
+        <li> <Link to="/projects" style={liStyle}>Projects</Link> </li>
+        <li> <Link to="/courses" style={liStyle}>Courses</Link> </li>
+        <li> <Link to="/contact" style={liStyle}>Contact Me</Link> </li>
       </ul>
     </div>
   );

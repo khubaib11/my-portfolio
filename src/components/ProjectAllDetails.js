@@ -1,13 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import projectData from '../data/projectData';
 import SideBtn from './SideBtn';
+import { useParams } from 'react-router-dom'; 
 
-function ProjectAllDetails({ id }) {
+function ProjectAllDetails() {
+  let { id } = useParams(); // Extract id from route params
+  
   const [blurProjectsBodyNav, setBlurProjectsBodyNav] = useState(false); // State for blur effect
   const [isPortrait, setIsPortrait] = useState(window.innerWidth / window.innerHeight < 1);
-  const project = projectData.find((project) => project.id === id);
+  const [project,setProject] = useState(projectData[0]) 
+  console.log(project)
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const videoRef = useRef(null);
+
+  useEffect(() => {
+    let cleanedStr = id.replace(/[^0-9]/g, ''); // Remove all non-numeric characters
+    const parsedId = parseInt(cleanedStr, 10); // Ensure to parse as base 10
+    console.log(parsedId)
+    const selectedProject = projectData.find(project => project.id == parsedId);
+    if (selectedProject) {
+      setProject(selectedProject);
+    }
+  }, [id]);
+  
+  
 
   useEffect(() => {
     const handleResize = () => {

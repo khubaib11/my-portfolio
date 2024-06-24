@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import SideBtn from './SideBtn';
 import TypeAnimation from './TypeAnimation';
 
@@ -70,8 +71,9 @@ const Home = () => {
               <div>
                 {showBtn && (
                   <div>
-                    <button className="btn">About Me</button>
-                    <button className="btn">Projects</button>
+                    {/* Use Link components instead of buttons */}
+                    <Link to="/about" className="btn">About Me</Link>
+                    <Link to="/projects" className="btn">Projects</Link>
                   </div>
                 )}
 
@@ -88,6 +90,5 @@ const Home = () => {
     </div>
   );
 }
-
 
 export default Home;
