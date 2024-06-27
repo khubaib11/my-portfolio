@@ -38,7 +38,7 @@ function Project({ data }) {
 
   return (
     <Card style={cardStyle}>
-      <Card.Img variant="top" src='/img/bk3.jpeg' style={imgStyle} />
+      <Card.Img variant="top" src={`/img/p${data.id}i0.jpeg`} style={imgStyle} />
       <Card.Body>
         <Card.Title>{data.name}</Card.Title>
         <Card.Text style={textStyle}>

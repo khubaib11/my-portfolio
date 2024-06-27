@@ -62,7 +62,7 @@ const Home = () => {
                 )}
                 {showProfession && (
                   <h1>
-                    <TypeAnimation text='Web Developer' />
+                    <TypeAnimation text='Software Developer' />
                   </h1>
                 )}
               </div>

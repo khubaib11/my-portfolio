@@ -58,7 +58,7 @@ function ProjectAllDetails() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: '5vh',
+    marginBottom: '-5vh',
     
 };
 
